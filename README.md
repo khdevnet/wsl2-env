@@ -14,8 +14,7 @@ wsl
 ```
 In wsl command line enter commands
 ```
-sudo apt-get update
-sudo apt-get install git
+curl -s https://raw.githubusercontent.com/khdevnet/wsl2-env/main/install-git.sh | sh /dev/stdin
 ```
 4. Load scripts to install docker on wsl
 ```
