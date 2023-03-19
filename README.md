@@ -54,6 +54,35 @@ wsl --import <newDistroName> c:/wsl/instances/ubuntu2204 c:/wsl/images/ubuntu220
 wsl --set-default <newDistroName>
 ```
 
+## Create wsl docker alias
+To create a WSL Docker alias in PowerShell, you can add a custom function in your PowerShell profile. Follow these steps:
+1 Open your PowerShell profile file or create one if it doesn't exist. You can use the following command to open the profile file in the default text editor:
+powershell
+Copy code
+```
+if (!(Test-Path -Path $PROFILE)) { New-Item -Type File -Path $PROFILE -Force }
+notepad.exe $PROFILE
+```
+2 Add the following function to the profile file, Save and close the profile file.:
+
+```
+function docker {
+    param (
+        [Parameter(ValueFromRemainingArguments = $true)]
+        $args
+    )
+    $wslDist = "Ubuntu" # Replace with your WSL distribution name
+    $dockerCommand = "docker"
+    wsl -d $wslDist -e $dockerCommand $args
+}
+```
+
+
+Restart PowerShell and Remote Sign new powershell script:
+```
+Set-ExecutionPolicy RemoteSigned
+```
+
 
 
 Install wsl2 Windows 11 [Link](https://learn.microsoft.com/en-us/windows/wsl/install) 
