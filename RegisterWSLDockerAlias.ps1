@@ -4,6 +4,11 @@ $doskeyMacro = "doskey docker=wsl -e docker `$*"
 $regKeyPath = "HKCU:\Software\Microsoft\Command Processor"
 $regValueName = "AutoRun"
 
+# Create the registry key if it does not exist
+if (-not (Test-Path $regKeyPath)) {
+    New-Item -Path $regKeyPath -Force | Out-Null
+}
+
 # Get existing AutoRun value
 $existingValue = Get-ItemProperty -Path $regKeyPath -Name $regValueName -ErrorAction SilentlyContinue
 
