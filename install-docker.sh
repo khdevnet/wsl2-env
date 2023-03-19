@@ -1,4 +1,5 @@
 #!/bin/sh
+# curl -s https://raw.githubusercontent.com/khdevnet/wsl2-env/main/install-docker.sh | sh
 # https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository
 
 sudo apt-get update
