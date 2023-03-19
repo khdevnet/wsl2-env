@@ -1,5 +1,6 @@
 #!/bin/sh
 # curl -s https://raw.githubusercontent.com/khdevnet/wsl2-env/main/install-docker.sh | sh
+# https://dev.solita.fi/2021/12/21/docker-on-wsl2-without-docker-desktop.html
 # https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository
 
 sudo apt-get update
