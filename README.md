@@ -28,10 +28,16 @@ cd ~/projects/scripts
 
 
 # Other
-# remove registered instance
+Remove registered instance
 ```
 wsl --unregister u2204
 ```
+
+Run distribution
+```
+wsl -d ut -u ant
+```
+
 
 Export installed distro to folder
 ```
