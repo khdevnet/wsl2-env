@@ -3,6 +3,8 @@
 # https://dev.solita.fi/2021/12/21/docker-on-wsl2-without-docker-desktop.html
 # https://docs.docker.com/engine/install/ubuntu/#install-using-the-repository
 
+sudo apt remove docker docker-engine docker.io containerd runc
+
 sudo apt-get update
 sudo apt-get install \
     ca-certificates \
@@ -22,7 +24,7 @@ sudo apt-get update
 sudo chmod a+r /etc/apt/keyrings/docker.gpg
 sudo apt-get update
 
-sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+sudo apt-get install -y docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 
 sudo groupadd docker
 sudo usermod -aG docker $USER
