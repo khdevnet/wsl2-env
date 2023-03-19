@@ -24,4 +24,4 @@ rm packages-microsoft-prod.deb
 
 # Update packages
 apt-get -y update
-apt-get -y install $1 # $1 dotnet-sdk-7.0
+apt-get -y install dotnet-sdk-7.0
