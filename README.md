@@ -30,7 +30,7 @@ wsl --shutdown
 cd ~
 mkdir -p projects
 cd ~/projects
-git clone [https://github.com/khdevnet/wsl2-env.git](https://github.com/khdevnet/httpvsgrpc.git)
+git clone https://github.com/khdevnet/httpvsgrpc.git
 cd ~/projects/httpvsgrpc
 ```
 
