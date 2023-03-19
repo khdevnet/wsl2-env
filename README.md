@@ -28,6 +28,11 @@ cd ~/projects/scripts
 
 
 # Other
+# remove registered instance
+```
+wsl --unregister u2204
+```
+
 Export installed distro to folder
 ```
 wsl -l -v # Verify distro name to export
@@ -35,6 +40,7 @@ wsl --export <distroname> .\images\<distroname>.tar
 wsl --import <newDistroName> .\instances\<newDistroName> .\images\<distroname>.tar
 wsl --set-default <newDistroName>
 ```
+
 
 
 Install wsl2 Windows 11 [Link](https://learn.microsoft.com/en-us/windows/wsl/install) 
