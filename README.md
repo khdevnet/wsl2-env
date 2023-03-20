@@ -85,7 +85,7 @@ Set-ExecutionPolicy RemoteSigned
 
 ## Dotnet instalation
 https://github.com/dotnet/sdk/issues/27082      
-https://github.com/dotnet/core/issues/7699
+install dotnet on ubuntu 22.04 https://github.com/dotnet/core/issues/7699
 ```
 Install specific version of dotnet
 sudo apt list --all-versions dotnet-sdk-6.0
