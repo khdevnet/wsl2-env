@@ -83,6 +83,15 @@ Restart PowerShell and Remote Sign new powershell script:
 Set-ExecutionPolicy RemoteSigned
 ```
 
+## Dotnet instalation
+https://github.com/dotnet/sdk/issues/27082      
+https://github.com/dotnet/core/issues/7699
+```
+Install specific version of dotnet
+sudo apt list --all-versions dotnet-sdk-6.0
+sudo apt install dotnet-sdk-6.0=6.0.107-1
+```
+
 
 
 Install wsl2 Windows 11 [Link](https://learn.microsoft.com/en-us/windows/wsl/install) 
