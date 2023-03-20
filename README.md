@@ -51,7 +51,7 @@ Export installed distro to folder
 wsl -l -v # Verify distro name to export
 wsl --export <distroname> c:/wsl/images/ubuntu2204.tar
 wsl --import <newDistroName> c:/wsl/instances/ubuntu2204 c:/wsl/images/ubuntu2204.tar
-wsl --set-default <newDistroName>
+wsl --setdefault u2204c
 ```
 
 ## Create wsl docker alias
