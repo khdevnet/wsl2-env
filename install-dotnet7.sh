@@ -1,5 +1,5 @@
 #!/bin/bash
-# curl -s https://raw.githubusercontent.com/khdevnet/wsl2-env/main/install-dotnet.sh | sh
+# curl -s https://raw.githubusercontent.com/khdevnet/wsl2-env/main/install-dotnet7.sh | sh
 
 # clean
 # https://learn.microsoft.com/en-us/dotnet/core/install/linux-package-mixup?pivots=os-linux-ubuntu#i-need-a-version-of-net-that-isnt-provided-by-my-linux-distribution
