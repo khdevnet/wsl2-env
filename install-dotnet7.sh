@@ -3,12 +3,13 @@
 
 # clean
 # https://learn.microsoft.com/en-us/dotnet/core/install/linux-package-mixup?pivots=os-linux-ubuntu#i-need-a-version-of-net-that-isnt-provided-by-my-linux-distribution
-# apt remove 'dotnet*' 'aspnet*' 'netstandard*'
-# touch /etc/apt/preferences
 
-# "Package: dotnet* aspnet* netstandard*" >> /etc/apt/preferences
-# "Pin: origin \"archive.ubuntu.com\"" >> /etc/apt/preferences
-# "Pin-Priority: -10" >> /etc/apt/preferences
+apt remove 'dotnet*' 'aspnet*' 'netstandard*'
+
+touch /etc/apt/preferences
+"Package: dotnet* aspnet* netstandard*" >> /etc/apt/preferences
+"Pin: origin \"archive.ubuntu.com\"" >> /etc/apt/preferences
+"Pin-Priority: -10" >> /etc/apt/preferences
 
 # Get Ubuntu version
 declare repo_version=$(if command -v lsb_release &> /dev/null; then lsb_release -r -s; else grep -oP '(?<=^VERSION_ID=).+' /etc/os-release | tr -d '"'; fi)
