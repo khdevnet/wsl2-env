@@ -42,10 +42,5 @@ echo '    sudo dockerd > /dev/null 2>&1 &' >> ~/.bashrc
 echo '    disown' >> ~/.bashrc
 echo 'fi' >> ~/.bashrc
 
-# TEMP
-# sudo apt-get install -y uidmap
-# sudo apt-get install -y dbus-user-session
-
-# start automatically
-# sudo systemctl enable docker.service
-# sudo systemctl enable containerd.service
+sudo chown "$USER":"$USER" /home/"$USER"/.docker -R
+sudo chmod g+rwx "/home/$USER/.docker" -R
