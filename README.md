@@ -100,6 +100,10 @@ sudo apt install dotnet-sdk-6.0=6.0.107-1
 ```
 
 
+## Mount network drive
+```
+sudo mkdir /mnt/wslinstall && sudo mount -t drvfs '\\zdevfs2\zdevfs_public\Scripts\wsl2' /mnt/wslinstall 
+```
 
 Install wsl2 Windows 11 [Link](https://learn.microsoft.com/en-us/windows/wsl/install) 
 https://www.paulsblog.dev/how-to-install-docker-without-docker-desktop-on-windows/
