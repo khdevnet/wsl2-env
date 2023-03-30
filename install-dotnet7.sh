@@ -7,9 +7,10 @@
 apt remove 'dotnet*' 'aspnet*' 'netstandard*'
 
 touch /etc/apt/preferences
-"Package: dotnet* aspnet* netstandard*" >> /etc/apt/preferences
-"Pin: origin \"archive.ubuntu.com\"" >> /etc/apt/preferences
-"Pin-Priority: -10" >> /etc/apt/preferences
+chmod 777 /etc/apt/preferences
+echo "Package: dotnet* aspnet* netstandard*" >> /etc/apt/preferences
+echo "Pin: origin \"archive.ubuntu.com\"" >> /etc/apt/preferences
+echo "Pin-Priority: -10" >> /etc/apt/preferences
 
 # Get Ubuntu version
 declare repo_version=$(if command -v lsb_release &> /dev/null; then lsb_release -r -s; else grep -oP '(?<=^VERSION_ID=).+' /etc/os-release | tr -d '"'; fi)
