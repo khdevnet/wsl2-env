@@ -61,6 +61,11 @@ sudo lsof -i -P -n | grep LISTEN # wsl ports
 netstat -ano | findstr 1433 # windows ports
 ```
 
+Set default user to WSL distro
+```
+sudo chmod 777 /etc/wsl.conf && echo "[user]" >> /etc/wsl.conf && echo "default=USER_NAME" >> /etc/wsl.conf
+```
+
 ## Create wsl docker alias
 To create a WSL Docker alias in PowerShell, you can add a custom function in your PowerShell profile. Follow these steps:
 1 Open your PowerShell profile file or create one if it doesn't exist. You can use the following command to open the profile file in the default text editor:
